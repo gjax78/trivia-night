@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import fetchData from '../../apiCalls'
+import { isThisTypeNode } from 'typescript';
+import { render } from '@testing-library/react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          hello
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface Props {
+}
+
+interface State {
+  questions: Test
+}
+
+interface Test {
+  category: string,
+  id: string,
+  correctAnswer: string,
+  incorrectAnswer: any,
+  question: string,
+  tags: any
+}
+
+class App extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      questions:
+        {
+          category: '',
+          id:'',
+          correctAnswer: '',
+          incorrectAnswer: [],
+          question: '',
+          tags:[]
+        }
+      }
+    }
+  
+
+  fetchData = () => {
+    fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')
+    .then(data => this.setState({questions: data.results}))
+    console.log(this.state.questions)
+    }
+
+  componentDidMount = () => this.fetchData();
+
+  render() {
+    {console.log(this.state.questions)}
+    return (
+      <div className="App">
+        <p>{this.state.questions}</p>
+      </div>
+    );
+
+  }
 }
 
 export default App;
