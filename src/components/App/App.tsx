@@ -1,55 +1,53 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './App.css';
 import fetchData from '../../apiCalls'
 import { isThisTypeNode } from 'typescript';
 import { render } from '@testing-library/react';
+import Questions from '../Questions/Questions'
 
-interface Props {
-}
+import data from '../../data';
+
+interface Props {}
 
 interface State {
-  questions: Test
+  questions: Array<any>
 }
 
-interface Test {
+interface Question {
   category: string,
   id: string,
   correctAnswer: string,
-  incorrectAnswer: any,
+  incorrectAnswers: any,
   question: string,
-  tags: any
+  type: string,
+  tags: any,
+  difficulty: string
 }
 
 class App extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor(props: any) {
     super(props);
     this.state = {
-      questions:
-        {
-          category: '',
-          id:'',
-          correctAnswer: '',
-          incorrectAnswer: [],
-          question: '',
-          tags:[]
-        }
-      }
+      questions: []
     }
+  }
   
+  // fetchData = () => {
+  //   fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')
+  //   .then(data => this.setState({questions: data}))
+  //   console.log("first")
+  //   }
 
-  fetchData = () => {
-    fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')
-    .then(data => this.setState({questions: data.results}))
-    console.log(this.state.questions)
-    }
+  // componentDidMount = () => this.fetchData();
 
-  componentDidMount = () => this.fetchData();
+  componentDidMount = () => this.setState({questions: data});
 
   render() {
-    {console.log(this.state.questions)}
+    {console.log(data)}
     return (
       <div className="App">
-        <p>{this.state.questions}</p>
+        <p>yo</p> 
+        <Questions questions={this.state.questions}/>
       </div>
     );
 
