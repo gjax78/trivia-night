@@ -2,20 +2,26 @@ import React from 'react';
 import QuestionCard from '../QuestionCard/QuestionCard'
 
 interface Quests {
-  category: string,
-  id: string,
-  question: string,
-  correctAnswer: string,
-  incorrectAnswers: Array<any>,
-  difficulty: string,
-  type: string,
-  tags: Array<any>,
-  key: string
+  questions: [
+    {
+    category: string,
+    id: string,
+    question: string,
+    correctAnswer: string,
+    incorrectAnswers: Array<any>,
+    difficulty: string,
+    type: string,
+    tags: Array<any>,
+    key: string
+  }
+  ]
 }
 
-
-const Questions: Array<any> = ({ questions }) => {
+const Questions = ({ questions }: Quests) => {
   const questionCards = questions.map(question => {
+    if(!question.difficulty) {
+      question.difficulty = "easy"
+    }
     return (
         <div className='ideas-container'>
           <QuestionCard

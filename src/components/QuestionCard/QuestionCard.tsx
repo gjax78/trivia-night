@@ -1,6 +1,17 @@
 import React from 'react';
 
-const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, category, id }) => {
+interface Card {
+  question: string,
+  correctAnswer: string,
+  incorrectAnswers: Array<string>,
+  difficulty: string,
+  category: string,
+  id: string,
+  type:string,
+  tags: Array<any>,
+}
+
+const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, category }: Card) => {
   return (
     <div className='card'>
       <h2>{category}</h2>
