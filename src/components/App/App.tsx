@@ -5,8 +5,24 @@ import { getParsedCommandLineOfConfigFile, isThisTypeNode } from 'typescript';
 import { render } from '@testing-library/react';
 import Questions from '../Questions/Questions'
 
+interface QuestionsData {
+  questions: Array<QuestionData>
+}
+
+interface QuestionData {
+  category: string,
+  id: string,
+  question: string,
+  correctAnswer: string,
+  incorrectAnswers: Array<string | number>,
+  difficulty?: string,
+  type: string,
+  tags: Array<string>,
+  key?: string
+}
+
 const App = () => {
-  const [questions, setQuestions] = useState<any>([]);
+  const [questions, setQuestions] = useState <Array<any>>([]);
 
 useEffect(() => {
   fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')

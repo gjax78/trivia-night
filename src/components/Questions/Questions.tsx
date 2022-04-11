@@ -1,23 +1,40 @@
 import React from 'react';
 import QuestionCard from '../QuestionCard/QuestionCard'
 
-interface Quests {
-  questions: [
-    {
-    category: string,
-    id: string,
-    question: string,
-    correctAnswer: string,
-    incorrectAnswers: Array<any>,
-    difficulty: string,
-    type: string,
-    tags: Array<any>,
-    key: string
-  }
-  ]
+// interface Quests {
+//   questions: [
+//     {
+//     category: string,
+//     id: string,
+//     question: string,
+//     correctAnswer: string,
+//     incorrectAnswers: Array<any>,
+//     difficulty: string,
+//     type: string,
+//     tags: Array<any>,
+//     key: string
+//   }
+//   ]
+// }
+//array of objects
+interface QuestionsData {
+  questions: Array<QuestionData>
+}
+//single data object
+interface QuestionData {
+  category: string,
+  id: string,
+  question: string,
+  correctAnswer: string,
+  incorrectAnswers: Array<string | number>,
+  difficulty?: string,
+  type: string,
+  tags: Array<string>,
+  key?: string
 }
 
-const Questions = ({ questions }: Quests) => {
+
+const Questions = ({ questions }: QuestionsData) => {
   const questionCards = questions.map(question => {
     if(!question.difficulty) {
       question.difficulty = "easy"
@@ -41,7 +58,7 @@ const Questions = ({ questions }: Quests) => {
   return (
     <div>
       {questionCards}
-      {/* <button onClick={() => saveQuestions(id)}>Trash</button> */}
+      {/* <button onClick={() => saveQuestions(id)}>Save</button> */}
     </div>
   )
 }
