@@ -8,17 +8,9 @@ const Questions = ({ questions }: QuestionData) : JSX.Element => {
       question.difficulty = "easy"
     }
     return (
-        <div className='questions-container'>
+        <div className='questions-container' key={question.id}>
           <QuestionCard
-            category={question.category}
-            id={question.id}
-            question={question.question}
-            correctAnswer={question.correctAnswer}
-            incorrectAnswers={question.incorrectAnswers}
-            difficulty={question.difficulty}
-            type={question.type}
-            tags={question.tags}
-            key={question.id}
+            {...question}
           />
         </div>
     )
