@@ -11,7 +11,7 @@ interface QuestionData {
   id: string,
   question: string,
   correctAnswer: string,
-  incorrectAnswers: Array<string | number>,
+  incorrectAnswers: Array<string>,
   difficulty?: string,
   type: string,
   tags: Array<string>,
@@ -19,7 +19,7 @@ interface QuestionData {
 }
 
 const App = () => {
-  const [questions, setQuestions] = useState <Array<any>>([]);
+  const [questions, setQuestions] = useState <QuestionData[]>([]);
 
 useEffect(() => {
   fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')
