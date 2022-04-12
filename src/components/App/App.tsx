@@ -5,9 +5,6 @@ import { getParsedCommandLineOfConfigFile, isThisTypeNode } from 'typescript';
 import { render } from '@testing-library/react';
 import Questions from '../Questions/Questions'
 
-interface QuestionsData {
-  questions: Array<QuestionData>
-}
 
 interface QuestionData {
   category: string,
@@ -31,7 +28,7 @@ useEffect(() => {
 
   return (
       <div className="App">
-        <p>yo</p> 
+        <p>yo</p>
         <Questions questions={questions}/>
       </div>
     )
