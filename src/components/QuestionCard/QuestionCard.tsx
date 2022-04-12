@@ -1,7 +1,7 @@
 import React from 'react';
-import { QuestionData as QuestionData } from '../App/App'
+import { QuestionDataType as QuestionDataType } from '../App/App'
 
-const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, category }: QuestionData) : JSX.Element => {
+const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, category }: QuestionDataType) : JSX.Element => {
   return (
     <div className='card'>
       <h2>{category}</h2>
