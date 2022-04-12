@@ -1,6 +1,6 @@
 import React from 'react';
 import QuestionCard from '../QuestionCard/QuestionCard'
-import { QuestionData as QuestionData} from '../App/App'
+import { Questions as QuestionData} from '../App/App'
 
 const Questions = ({ questions }: QuestionData) : JSX.Element => {
   const questionCards = questions.map(question => {
