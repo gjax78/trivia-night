@@ -6,7 +6,7 @@ import { render } from '@testing-library/react';
 import Questions from '../Questions/Questions'
 
 
-interface QuestionData {
+export interface QuestionData {
   category: string,
   id: string,
   question: string,
