@@ -5,11 +5,11 @@ import { getParsedCommandLineOfConfigFile, isThisTypeNode } from 'typescript';
 import { render } from '@testing-library/react';
 import Questions from '../Questions/Questions'
 
-export interface Questions {
-  questions: QuestionData[]
+export interface QuestionsType {
+  questionsProp: QuestionDataType[]
 }
 
-export interface QuestionData {
+export interface QuestionDataType {
   category: string,
   id: string,
   question: string,
@@ -22,17 +22,17 @@ export interface QuestionData {
 }
 
 const App = () => {
-  const [questions, setQuestions] = useState <QuestionData[]>([]);
+  const [questionsState, setQuestionsState] = useState <QuestionDataType[]>([]);
 
 useEffect(() => {
   fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')
-  .then(data => setQuestions(data))
+  .then(data => setQuestionsState(data))
   }, [])
 
   return (
       <div className="App">
         <p>yo</p>
-        <Questions questions={questions}/>
+        <Questions questionsProp={questionsState}/>
       </div>
     )
 }
