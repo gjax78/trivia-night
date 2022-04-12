@@ -1,17 +1,7 @@
 import React from 'react';
+import { QuestionData as QuestionData } from '../App/App'
 
-interface Card {
-  question: string,
-  correctAnswer: string,
-  incorrectAnswers: Array<string>,
-  difficulty: string,
-  category: string,
-  id: string,
-  type:string,
-  tags: Array<any>,
-}
-
-const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, category }: Card) => {
+const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, category }: QuestionData) : JSX.Element => {
   return (
     <div className='card'>
       <h2>{category}</h2>
