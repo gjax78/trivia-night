@@ -1,62 +1,22 @@
 import React from 'react';
 import QuestionCard from '../QuestionCard/QuestionCard'
+import { QuestionsType as QuestionDataType} from '../App/App'
 
-// interface Quests {
-//   questions: [
-//     {
-//     category: string,
-//     id: string,
-//     question: string,
-//     correctAnswer: string,
-//     incorrectAnswers: Array<any>,
-//     difficulty: string,
-//     type: string,
-//     tags: Array<any>,
-//     key: string
-//   }
-//   ]
-// }
-//array of objects
-interface QuestionsData {
-  questions: Array<QuestionData>
-}
-//single data object
-interface QuestionData {
-  category: string,
-  id: string,
-  question: string,
-  correctAnswer: string,
-  incorrectAnswers: Array<string | number>,
-  difficulty?: string,
-  type: string,
-  tags: Array<string>,
-  key?: string
-}
-
-
-const Questions = ({ questions }: QuestionsData) => {
-  const questionCards = questions.map(question => {
+const Questions = ({ questionsProp }: QuestionDataType) : JSX.Element => {
+  const questionCards = questionsProp.map(question => {
     if(!question.difficulty) {
       question.difficulty = "easy"
     }
     return (
-        <div className='ideas-container'>
+        <div className='questions-container' key={question.id}>
           <QuestionCard
-            category={question.category}
-            id={question.id}
-            question={question.question}
-            correctAnswer={question.correctAnswer}
-            incorrectAnswers={question.incorrectAnswers}
-            difficulty={question.difficulty}
-            type={question.type}
-            tags={question.tags}
-            key={question.id}
+            {...question}
           />
         </div>
     )
   })
   return (
-    <div>
+    <div className='questions-container'>
       {questionCards}
       {/* <button onClick={() => saveQuestions(id)}>Save</button> */}
     </div>
