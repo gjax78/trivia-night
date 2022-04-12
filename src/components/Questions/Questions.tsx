@@ -1,38 +1,6 @@
 import React from 'react';
 import QuestionCard from '../QuestionCard/QuestionCard'
-
-// interface Quests {
-//   questions: [
-//     {
-//     category: string,
-//     id: string,
-//     question: string,
-//     correctAnswer: string,
-//     incorrectAnswers: Array<any>,
-//     difficulty: string,
-//     type: string,
-//     tags: Array<any>,
-//     key: string
-//   }
-//   ]
-// }
-//array of objects
-interface QuestionsData {
-  questions: Array<QuestionData>
-}
-//single data object
-interface QuestionData {
-  category: string,
-  id: string,
-  question: string,
-  correctAnswer: string,
-  incorrectAnswers: Array<string | number>,
-  difficulty?: string,
-  type: string,
-  tags: Array<string>,
-  key?: string
-}
-
+import { QuestionData as QuestionData} from '../App/App'
 
 const Questions = ({ questions }: QuestionsData) => {
   const questionCards = questions.map(question => {
