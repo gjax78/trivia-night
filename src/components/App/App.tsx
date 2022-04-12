@@ -5,6 +5,9 @@ import { getParsedCommandLineOfConfigFile, isThisTypeNode } from 'typescript';
 import { render } from '@testing-library/react';
 import Questions from '../Questions/Questions'
 
+export interface Questions {
+  questions: QuestionData[]
+}
 
 export interface QuestionData {
   category: string,
