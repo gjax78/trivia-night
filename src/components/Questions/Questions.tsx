@@ -1,9 +1,9 @@
 import React from 'react';
 import QuestionCard from '../QuestionCard/QuestionCard'
-import { Questions as QuestionData} from '../App/App'
+import { QuestionsType as QuestionDataType} from '../App/App'
 
-const Questions = ({ questions }: QuestionData) : JSX.Element => {
-  const questionCards = questions.map(question => {
+const Questions = ({ questionsProp }: QuestionDataType) : JSX.Element => {
+  const questionCards = questionsProp.map(question => {
     if(!question.difficulty) {
       question.difficulty = "easy"
     }
