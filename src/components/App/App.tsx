@@ -4,6 +4,7 @@ import fetchData from '../../apiCalls'
 import { getParsedCommandLineOfConfigFile, isThisTypeNode } from 'typescript';
 import { render } from '@testing-library/react';
 import Questions from '../Questions/Questions'
+import Categories from '../Categories/Categories'
 
 export interface QuestionsType {
   questionsProp: QuestionDataType[]
@@ -33,6 +34,7 @@ useEffect(() => {
       <div className="App">
         <p>yo</p>
         <Questions questionsProp={questionsState}/>
+        <Categories />
       </div>
     )
 }
