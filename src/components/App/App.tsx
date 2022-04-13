@@ -33,7 +33,7 @@ useEffect(() => {
   return (
       <div className="App">
         <p>yo</p>
-        // <Questions questionsProp={questionsState}/>
+        <Questions questionsProp={questionsState}/>
         <Categories />
       </div>
     )
