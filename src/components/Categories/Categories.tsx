@@ -7,22 +7,7 @@ interface Card {
   onClick: React.MouseEvent<HTMLButtonElement>;
 }
 
-const Categories = () => {
-  const [questionsState, setQuestionsState] = useState <QuestionDataType[]>([]);
-
-  const fetchCategory = (cat: string) => {
-      fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')
-    .then(data => setQuestionsState(data))
-    }
-
-  const handleClick = (event: React.ChangeEvent, category: string) => {
-    event.preventDefault()
-    getCategory(category)
-  }
-
-const getCategory = (category: string) => {
-  fetchCategory(category)
-  }
+const Categories = ( {handleClick} ) => {
 
   return (
     <div className='button-container'>
@@ -54,10 +39,10 @@ const getCategory = (category: string) => {
       onClick={(event) => handleClick(event, 'science')}>Science</button>
       <button className='society-and-culture'
       value={'society_and_culture'}
-      onClick={(event) => handleClick(event, 'society-and-culture')}>Society & Culture</button>
-      <button className='sports-and-leisure'
-      value={'sports_and_leisure'}
-      onClick={(event) => handleClick(event, 'sports-and-leisure')}>Sports & Leisure</button>
+      onClick={(event) => handleClick(event, 'society_and_culture')}>Society & Culture</button>
+      <button className='sport-and-leisure'
+      value={'sport_and_leisure'}
+      onClick={(event) => handleClick(event, 'sport_and_leisure')}>Sports & Leisure</button>
     </div>
   )
 }
