@@ -1,16 +1,3 @@
-// The homepage holds all the categories
-// User clicks the category -> state is assigned
-// Each category assigns the state to the clicked cateogry type
-// Create a fetch function that would use state(category) to interpolate URL based on click
-// useEffect would call the fetch function
-// return all buttons for each category
-// pass category to Questions via props
-//quests be displayed yo
-
-//App shows Cateogories component
-//Cateogires show Questions component
-//Button on Questions to save questions to Game component
-
 import React, { useState, useEffect } from 'react'
 import { QuestionsType as CategoriesDataType } from '../App/App'
 import fetchData from '../../apiCalls'
@@ -21,30 +8,24 @@ interface Card {
 }
 
 const Categories = () => {
-  const [categories, setCategories] = useState([])
+  const [questionsState, setQuestionsState] = useState <QuestionDataType[]>([]);
 
   const fetchCategory = (cat: string) => {
-    fetchData.getData(`https://the-trivia-api.com/questions?categories=${cat}&limit=20`)
-    .then(data => setCategories(data))
-  }
+      fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')
+    .then(data => setQuestionsState(data))
+    }
 
   const handleClick = (event) => {
     event.preventDefault()
-    // event.target.value === event.target.value
-    // fetchCategory(event.target.value)
-    // setCategories(event.target.value)
-    // setCategories(event.target.value)
-    console.log('clicked')
-    console.log(categories)
-    doTheThing()
+    getCategory(category)
   }
   //
   // onChange = (e: React.ChangeEvent<HTMLInputElement>)=> {
   //    const newValue = e.target.value;
   // }
   //
-const doTheThing = () => {
-  fetchCategory(event.target.value)
+const getCategory = (category: string) => {
+  fetchCategory(category)
   }
 
   // useEffect(() => {

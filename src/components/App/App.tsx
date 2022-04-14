@@ -23,17 +23,11 @@ export interface QuestionDataType {
 }
 
 const App = () => {
-  const [questionsState, setQuestionsState] = useState <QuestionDataType[]>([]);
 
-useEffect(() => {
-  fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')
-  .then(data => setQuestionsState(data))
-  }, [])
 
   return (
       <div className="App">
         <p>yo</p>
-        <Questions questionsProp={questionsState}/>
         <Categories />
       </div>
     )
