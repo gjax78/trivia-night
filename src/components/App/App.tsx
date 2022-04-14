@@ -27,8 +27,9 @@ const App = () => {
 
   return (
       <div className="App">
-        <p>yo</p>
+        <p>Trivia</p>
         <Categories />
+        <Questions questionsProp={questions} />
       </div>
     )
 }
