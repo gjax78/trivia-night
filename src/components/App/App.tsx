@@ -22,19 +22,24 @@ export interface QuestionDataType {
   key?: string
 }
 
-const App = () => {
-  const [questionsState, setQuestionsState] = useState <QuestionDataType[]>([]);
-
-useEffect(() => {
-  fetchData.getData('https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20')
-  .then(data => setQuestionsState(data))
-  }, [])
-
-  return (
-      <div className="App">
-        <p>yo</p>
-        <Questions questionsProp={questionsState}/>
-        <Categories />
+const App = () => {	
+  const [questionsState, setQuestionState] = useState<QuestionDataType[]>([]);	
+  const handleClick = (event: React.ChangeEvent, category: string) => {	
+    event.preventDefault();	
+    getCategoryQuestions(category);	
+  }	
+  	
+  const getCategoryQuestions = (category: string) => {	
+    fetchCategory(category)	
+  }	
+  const fetchCategory = (category: string) => {	
+    fetchData.getData(`https://the-trivia-api.com/questions?categories=${category}&limit=20`)	
+    .then(data => setQuestionState(data));	
+  }	
+  return (	
+      <div className="App">	
+      <Categories handleClick={handleClick}/>	
+      <Questions questionsProp={questionsState}/>	
       </div>
     )
 }
