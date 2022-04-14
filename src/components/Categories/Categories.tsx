@@ -15,7 +15,7 @@ const Categories = () => {
     .then(data => setQuestionsState(data))
     }
 
-  const handleClick = (event) => {
+  const handleClick = (event: React.ChangeEvent, category: string) => {
     event.preventDefault()
     getCategory(category)
   }
