@@ -3,7 +3,7 @@ import QuestionCard from '../QuestionCard/QuestionCard'
 import { QuestionsType as QuestionDataType} from '../App/App'
 
 const Questions = ({ questionsProp }: QuestionDataType) : JSX.Element => {
-  
+
   // const [favorites, setFavorites] = useState([])
 
   // const addFavorite = (newFavorite) => {
@@ -23,8 +23,6 @@ const Questions = ({ questionsProp }: QuestionDataType) : JSX.Element => {
     return (
         <div className='questions-container' key={question.id}>
           <QuestionCard
-            // favorites={favorites}
-            // addFavorites={addFavorite}
             {...question}
           />
         </div>
@@ -34,7 +32,6 @@ const Questions = ({ questionsProp }: QuestionDataType) : JSX.Element => {
   return (
     <div className='questions-container'>
       {questionCards}
-      {/* <button onClick={() => saveQuestions(id)}>Save</button> */}
     </div>
   )
 }
