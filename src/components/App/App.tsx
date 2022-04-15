@@ -5,7 +5,8 @@ import { getParsedCommandLineOfConfigFile, isThisTypeNode } from 'typescript';
 import { render } from '@testing-library/react';
 import Questions from '../Questions/Questions';
 import Categories from '../Categories/Categories';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import Game from '../Game/Game';
 
 export interface QuestionsType {
   questionsProp: QuestionDataType[]
@@ -25,27 +26,23 @@ export interface QuestionDataType {
 
 const App = () => {
   const [questionsState, setQuestionState] = useState<QuestionDataType[]>([]);
-  const handleClick = (event: React.ChangeEvent, category: string) => {
-    event.preventDefault();
-    getCategoryQuestions(category);
-  }
 
-  const getCategoryQuestions = (category: string) => {
-    fetchCategory(category)
-  }
   const fetchCategory = (category: string) => {
     fetchData.getData(`https://the-trivia-api.com/questions?categories=${category}&limit=20`)
     .then(data => setQuestionState(data));
   }
   return (
-      <div className="App">
-      <Route exact path='/' render={() => {
-        <Categories handleClick={handleClick}/>
-      }} />
-      <Route exact path='/questions' render={() => {
+    <Switch>
+      <Route exact path='/'>
+        <Categories fetchCat={fetchCategory}/>
+      </Route>
+      <Route exact path='/questions'>
         <Questions questionsProp={questionsState}/>
-      }} />
-      </div>
+      </Route>
+      <Route exact path='/game'>
+        <Game />
+      </Route>
+    </Switch>
     )
 }
 
