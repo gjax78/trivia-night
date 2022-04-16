@@ -5,7 +5,7 @@ import '../QuestionCard/QuestionCard.css'
 const GameQuestionCard = ({category, question, correctAnswer, incorrectAnswers, difficulty, removeFromGame, id }: QuestionDataType) : JSX.Element => {
 
   return (
-    <div className='card'>
+    <div className='game-card'>
       <h2>{category}</h2>
       <h4>{question}</h4>
       <p>{correctAnswer}</p>
@@ -13,7 +13,7 @@ const GameQuestionCard = ({category, question, correctAnswer, incorrectAnswers, 
       <p>{difficulty}</p>
 
       <button 
-        className='like-button'
+        className='delete-button'
         onClick={() => removeFromGame(id)}
       >
         Remove From Game  

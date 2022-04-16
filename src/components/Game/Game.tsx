@@ -11,13 +11,13 @@ const Game = ({game, removeFromGame}) => {
       <div key={gameQuestion.id}>
         <GameQuestionCard 
         removeFromGame={removeFromGame}
-        {...gameQuestion} />
+        {...gameQuestion}
+        />
       </div>
     )
   })
   return (
     <div className='game-container'>
-      {console.log(game)}
      {gameQuestions}
     </div>
   )

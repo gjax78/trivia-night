@@ -7,7 +7,7 @@ const QuestionCard = ({addToGame, question, correctAnswer, incorrectAnswers, dif
 
   const [isFav, setIsFav] = useState(false)
 
-  const likeQuestion = () => {
+  const addQuestion = () => {
     if(!isFav) {
       setIsFav(true);
       const likedQuestion = {
@@ -33,7 +33,7 @@ const QuestionCard = ({addToGame, question, correctAnswer, incorrectAnswers, dif
       <p>{difficulty}</p>
 
       <button className='like-button'
-        onClick={() => likeQuestion()}>
+        onClick={() => addQuestion()}>
           {isFav ? 'added' : 'add to game'}
       </button>
     </div>

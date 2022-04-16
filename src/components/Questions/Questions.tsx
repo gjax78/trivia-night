@@ -12,7 +12,7 @@ const Questions = ({ questionsProp, addToGame }: QuestionDataType) : JSX.Element
     return (
         <div className='questions-container' key={question.id}>
           <QuestionCard
-          addToGame={addToGame}
+            addToGame={addToGame}
             {...question}
           />
         </div>
