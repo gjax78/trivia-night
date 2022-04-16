@@ -5,7 +5,7 @@ import Game from '../Game/Game';
 const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, category }: QuestionDataType) : JSX.Element => {
 
   const [isFav, setIsFav] = useState(false)
-  
+
   return (
     <div className='card'>
       <h2>{category}</h2>
@@ -16,20 +16,18 @@ const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, c
 
       <button className='like-button'
         onClick={() => setIsFav(true)}
-        >{isFav ? 'liked' : 'like' }</button>
+        >{isFav ? 'liked' : 'like'}</button>
 
-        {isFav ? 
+        {isFav ?
 
-        <Game 
+        <Game
         favCategory={category}
         favQuestion={question}
-        favCorrectAnswer={correctAnswer} 
+        favCorrectAnswer={correctAnswer}
         favIncorrectAnswers={incorrectAnswers}
         favDifficulty={difficulty}
         />
         : null}
-        
-        {/* <Game isFav={isFav} /> */}
     </div>
   )
 }
