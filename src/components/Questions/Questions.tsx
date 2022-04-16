@@ -3,7 +3,7 @@ import QuestionCard from '../QuestionCard/QuestionCard'
 import { QuestionsType as QuestionDataType} from '../App/App'
 import './Questions.css'
 
-const Questions = ({ questionsProp }: QuestionDataType) : JSX.Element => {
+const Questions = ({ questionsProp, addToGame }: QuestionDataType) : JSX.Element => {
   const questionCards = questionsProp.map(question => {
     if(!question.difficulty) {
       question.difficulty = "easy"
@@ -12,6 +12,7 @@ const Questions = ({ questionsProp }: QuestionDataType) : JSX.Element => {
     return (
         <div className='questions-container' key={question.id}>
           <QuestionCard
+          addToGame={addToGame}
             {...question}
           />
         </div>
