@@ -3,9 +3,26 @@ import { QuestionDataType as QuestionDataType } from '../App/App'
 import Game from '../Game/Game';
 import './QuestionCard.css'
 
-const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, category }: QuestionDataType) : JSX.Element => {
+const QuestionCard = ({addToGame, question, correctAnswer, incorrectAnswers, difficulty, category, id }: QuestionDataType) : JSX.Element => {
 
   const [isFav, setIsFav] = useState(false)
+
+  const likeQuestion = () => {
+    if(!isFav) {
+      setIsFav(true);
+      const likedQuestion = {
+        question: question,
+        correctAnswer: correctAnswer,
+        incorrectAnswers: incorrectAnswers,
+        difficulty: difficulty,
+        category: category,
+        id: id
+      }
+      addToGame(likedQuestion)
+    } else {
+      setIsFav(false);
+    }
+  }
 
   return (
     <div className='card'>
@@ -16,19 +33,9 @@ const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, c
       <p>{difficulty}</p>
 
       <button className='like-button'
-        onClick={() => setIsFav(true)}
-        >{isFav ? 'liked' : 'like'}</button>
-
-        {isFav ?
-
-        <Game
-        favCategory={category}
-        favQuestion={question}
-        favCorrectAnswer={correctAnswer}
-        favIncorrectAnswers={incorrectAnswers}
-        favDifficulty={difficulty}
-        />
-        : null}
+        onClick={() => likeQuestion()}>
+          {isFav ? 'added' : 'add to game'}
+      </button>
     </div>
   )
 }
