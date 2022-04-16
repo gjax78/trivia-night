@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import fetchData from '../../apiCalls'
+import fetchData from '../../apiCalls';
 import { getParsedCommandLineOfConfigFile, isThisTypeNode } from 'typescript';
 import { render } from '@testing-library/react';
-import Questions from '../Questions/Questions'
-import Categories from '../Categories/Categories'
+import Questions from '../Questions/Questions';
+import Categories from '../Categories/Categories';
+import { Route, Switch } from 'react-router-dom';
+import Game from '../Game/Game';
+import Header from '../Header/Header'
+
+
+
 
 export interface QuestionsType {
   questionsProp: QuestionDataType[]
@@ -22,25 +28,28 @@ export interface QuestionDataType {
   key?: string
 }
 
-const App = () => {	
-  const [questionsState, setQuestionState] = useState<QuestionDataType[]>([]);	
-  const handleClick = (event: React.ChangeEvent, category: string) => {	
-    event.preventDefault();	
-    getCategoryQuestions(category);	
-  }	
-  	
-  const getCategoryQuestions = (category: string) => {	
-    fetchCategory(category)	
-  }	
-  const fetchCategory = (category: string) => {	
-    fetchData.getData(`https://the-trivia-api.com/questions?categories=${category}&limit=20`)	
-    .then(data => setQuestionState(data));	
-  }	
-  return (	
-      <div className="App">	
-      <Categories handleClick={handleClick}/>	
-      <Questions questionsProp={questionsState}/>	
-      </div>
+const App = () => {
+  const [questionsState, setQuestionState] = useState<QuestionDataType[]>([]);
+
+  const fetchCategory = (category: string) => {
+    fetchData.getData(`https://the-trivia-api.com/questions?categories=${category}&limit=20`)
+    .then(data => setQuestionState(data));
+  }
+  return (
+    <Switch>
+      <Route exact path='/'>
+        <Header />
+        <Categories fetchCat={fetchCategory}/>
+      </Route>
+      <Route exact path='/questions'>
+        <Header />
+        <Questions questionsProp={questionsState}/>
+      </Route>
+      <Route exact path='/game'>
+        <Header />
+        <Game />
+      </Route>
+    </Switch>
     )
 }
 
