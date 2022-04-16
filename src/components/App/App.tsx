@@ -7,6 +7,10 @@ import Questions from '../Questions/Questions';
 import Categories from '../Categories/Categories';
 import { Route, Switch } from 'react-router-dom';
 import Game from '../Game/Game';
+import Header from '../Header/Header'
+
+
+
 
 export interface QuestionsType {
   questionsProp: QuestionDataType[]
@@ -34,12 +38,15 @@ const App = () => {
   return (
     <Switch>
       <Route exact path='/'>
+        <Header />
         <Categories fetchCat={fetchCategory}/>
       </Route>
       <Route exact path='/questions'>
+        <Header />
         <Questions questionsProp={questionsState}/>
       </Route>
       <Route exact path='/game'>
+        <Header />
         <Game />
       </Route>
     </Switch>
