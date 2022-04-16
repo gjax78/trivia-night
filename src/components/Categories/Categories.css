@@ -1,0 +1,31 @@
+body {
+  height: 100%;
+  background-color: #003046;
+}
+
+button {
+  background-color: #CC9226;
+  height: 100px;
+  width: 120px;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 3px 4px 5px #025367;
+}
+
+.button-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.top-row,
+.lower-row {
+  height: 25%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}

@@ -1,0 +1,16 @@
+.card {
+  height: 10%;
+  width: 25%;
+  background-color: #025367;
+  border-radius: 4%;
+  padding: 0 1% 0 1%;
+  box-shadow: 6px 8px 10px #BABD8D;
+  /* box-shadow: 6px 8px 10px #FF8221; */
+}
+
+.like-button {
+  height: 35px;
+  width: 50px;
+  box-shadow: none;
+  margin-bottom: 2%;
+}
