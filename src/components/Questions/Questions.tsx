@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import QuestionCard from '../QuestionCard/QuestionCard'
 import { QuestionsType as QuestionDataType} from '../App/App'
+import './Questions.css'
 
 const Questions = ({ questionsProp }: QuestionDataType) : JSX.Element => {
   

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { QuestionDataType as QuestionDataType } from '../App/App'
 import Game from '../Game/Game';
+import './QuestionCard.css'
 
 const QuestionCard = ({ question, correctAnswer, incorrectAnswers, difficulty, category }: QuestionDataType) : JSX.Element => {
 
