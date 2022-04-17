@@ -79,4 +79,16 @@ describe('Questions Page', () => {
         cy.get('*[class^="like-button"]')
           .should('have.text', "add to gameadd to game")
     })
+
+    it('should be able to save the question to their game', () => {
+      cy.intercept('GET', 'https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20', {
+        statusCode: 200,
+        fixture: 'questions.json'
+      })
+      cy.visit('http://localhost:3000/')
+        cy.get('*[class^="arts-and-literature"]')
+        .click({ force: true})
+        cy.get('*[class^="like-button"]')
+        .click({ multiple: true, force: true })
+    })
   })
