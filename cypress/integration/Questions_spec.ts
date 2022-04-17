@@ -67,4 +67,16 @@ describe('Questions Page', () => {
         cy.get('*[class^="questions-container"]')
         .contains("easy")
     })
+
+    it('should have a button to take the user to their saved questions', () => {
+      cy.intercept('GET', 'https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20', {
+        statusCode: 200,
+        fixture: 'questions.json'
+      })
+      cy.visit('http://localhost:3000/')
+        cy.get('*[class^="arts-and-literature"]')
+        .click({ force: true})
+        cy.get('*[class^="like-button"]')
+          .should('have.text', "add to gameadd to game")
+    })
   })
