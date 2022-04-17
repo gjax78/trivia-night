@@ -5,7 +5,6 @@ describe('Game Page', () => {
       fixture: 'questions.json'
     }).as('something')
 
-
     cy.visit('http://localhost:3000/questions')
     cy.get('*[class^="home"]')
       .should('have.text', 'Home')
@@ -48,4 +47,38 @@ describe('Game Page', () => {
           cy.get('*[class^="view-game"]')
           .click({force: true})
       })
+
+      it('should be able to view their saved question on the View Game page', () => {
+        cy.intercept('GET', 'https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20', {
+          statusCode: 200,
+          fixture: 'questions.json'
+        })
+        cy.visit('http://localhost:3000/')
+          cy.get('*[class^="arts-and-literature"]')
+          .click({ force: true})
+          cy.get('*[class^="like-button"]')
+          .click({ multiple: true, force: true })
+          cy.get('*[class^="view-game"]')
+          .click({force: true})
+          cy.get('*[class^="game-container"]')
+          .contains("William Shakespeare")
+      })
+
+      it('should be able to delete their saved question on the View Game page', () => {
+        cy.intercept('GET', 'https://the-trivia-api.com/questions?categories=arts_and_literature&limit=20', {
+          statusCode: 200,
+          fixture: 'questions.json'
+        })
+        cy.visit('http://localhost:3000/')
+          cy.get('*[class^="arts-and-literature"]')
+          .click({ force: true})
+          cy.get('*[class^="like-button"]')
+          .click({ multiple: true, force: true })
+          cy.get('*[class^="view-game"]')
+          .click({force: true})
+          cy.get('*[class^="game-container"]')
+          .contains("Remove From Game")
+          .click({force: true})
+      })
+
   })
