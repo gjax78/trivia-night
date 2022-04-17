@@ -57,7 +57,8 @@ const App = () => {
         <Header />
         <Questions 
           questionsProp={questionsState}
-          addToGame={addToGame} 
+          addToGame={addToGame}
+          removeFromGame={removeFromGame} 
         />
       </Route>
       <Route exact path='/game'>

@@ -3,7 +3,7 @@ import { QuestionDataType as QuestionDataType } from '../App/App'
 import Game from '../Game/Game';
 import './QuestionCard.css'
 
-const QuestionCard = ({addToGame, question, correctAnswer, incorrectAnswers, difficulty, category, id }: QuestionDataType) : JSX.Element => {
+const QuestionCard = ({addToGame, removeFromGame, question, correctAnswer, incorrectAnswers, difficulty, category, id }: QuestionDataType) : JSX.Element => {
 
   const [isFav, setIsFav] = useState(false)
 
@@ -21,6 +21,7 @@ const QuestionCard = ({addToGame, question, correctAnswer, incorrectAnswers, dif
       addToGame(likedQuestion)
     } else {
       setIsFav(false);
+      removeFromGame(id);
     }
   }
 
