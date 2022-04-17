@@ -30,11 +30,23 @@ export interface QuestionDataType {
 
 const App = () => {
   const [questionsState, setQuestionState] = useState<QuestionDataType[]>([]);
+  const [game, setGame] = useState([])
 
   const fetchCategory = (category: string) => {
     fetchData.getData(`https://the-trivia-api.com/questions?categories=${category}&limit=20`)
     .then(data => setQuestionState(data));
   }
+
+  const addToGame = (likedQuestion) => {
+    setGame([...game, likedQuestion])
+  }
+
+  const removeFromGame = (id) => {
+    const filteredGame = game.filter(question => question.id != id);
+
+    setGame(filteredGame);
+  }
+
   return (
     <Switch>
       <Route exact path='/'>
@@ -43,11 +55,17 @@ const App = () => {
       </Route>
       <Route exact path='/questions'>
         <Header />
-        <Questions questionsProp={questionsState}/>
+        <Questions 
+          questionsProp={questionsState}
+          addToGame={addToGame} 
+        />
       </Route>
       <Route exact path='/game'>
         <Header />
-        <Game />
+        <Game 
+          game={game} 
+          removeFromGame={removeFromGame}
+        />
       </Route>
     </Switch>
     )
