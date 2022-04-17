@@ -5,8 +5,6 @@ describe('Questions Page', () => {
       statusCode: 200,
       fixture: 'questions.json'
     }).as('something')
-
-
     cy.visit('http://localhost:3000/questions')
     cy.get('*[class^="home"]')
       .should('have.text', 'Home')
