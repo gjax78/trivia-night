@@ -1,0 +1,14 @@
+{
+"category": "Arts & Literature",
+"id": "622a1c397cc59eab6f950f9a",
+"correctAnswer": "William Shakespeare",
+"incorrectAnswers": [
+"Arthur C. Clarke",
+"Isaac Newton",
+"Enid Blyton"
+],
+"question": "Which author wrote 'Macbeth'?",
+"tags": [],
+"type": "Multiple Choice",
+"difficulty": "easy"
+}
