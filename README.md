@@ -2,7 +2,7 @@
   Want to host a trivia night but don't know where to start? Trivia Night is here!
   With Trivia Night a user will land on the page and see a series of trivia categories. From there the user will see a list of trivia questions for that category. They can then add and remove questions to their game page to create their own customized list of trivia questions!
 
-![gif]()
+![gif](https://user-images.githubusercontent.com/91504411/163891825-8dc313f4-dab1-497a-a463-5e457d22c617.gif)
 
 
 ## How to run
@@ -17,7 +17,6 @@
 - Fully tested with Cypress
 - Deployed with Surge
 
-![gif]()
 
 ## Technologies Used
 - React.js
