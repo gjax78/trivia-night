@@ -8,9 +8,9 @@ const GameQuestionCard = ({category, question, correctAnswer, incorrectAnswers, 
     <div className='game-card'>
       <h2>{category}</h2>
       <h4>{question}</h4>
-      <p>{correctAnswer}</p>
-      <p>{incorrectAnswers.join(', ')}</p>
-      <p>{difficulty}</p>
+      <p>CORRECT ANSWER: {correctAnswer}</p>
+      <p>INCORRECT ANSWERS: {incorrectAnswers.join(', ')}</p>
+      <p>DIFFICULTY: {difficulty}</p>
 
       <button
         className='delete-button'
