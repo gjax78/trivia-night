@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
-import { QuestionDataType as QuestionDataType } from '../App/App'
+import { QuestionCardProps as QuestionCardProps } from '../../utilities/utilities';
+import {LikedQuestion as LikedQuestion } from '../../utilities/utilities';
 import Game from '../Game/Game';
 import './QuestionCard.css'
 
-const QuestionCard = ({addToGame, removeFromGame, question, correctAnswer, incorrectAnswers, difficulty, category, id }: QuestionDataType) : JSX.Element => {
+const QuestionCard = ({addToGame, removeFromGame, question, correctAnswer, incorrectAnswers, difficulty, category, id }: QuestionCardProps) : JSX.Element => {
 
   const [isFav, setIsFav] = useState(false)
 
   const addQuestion = () => {
     if(!isFav) {
       setIsFav(true);
-      const likedQuestion = {
+      const likedQuestion: LikedQuestion = {
         question: question,
         correctAnswer: correctAnswer,
         incorrectAnswers: incorrectAnswers,
