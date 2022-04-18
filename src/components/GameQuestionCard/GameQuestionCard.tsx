@@ -9,14 +9,14 @@ const GameQuestionCard = ({category, question, correctAnswer, incorrectAnswers, 
       <h2>{category}</h2>
       <h4>{question}</h4>
       <p>CORRECT ANSWER: {correctAnswer}</p>
-      <p>INCORRECT ANSWERS: {incorrectAnswers}</p>
+      <p>INCORRECT ANSWERS: {incorrectAnswers.join(', ')}</p>
       <p>DIFFICULTY: {difficulty}</p>
 
-      <button 
+      <button
         className='delete-button'
         onClick={() => removeFromGame(id)}
       >
-        Remove From Game  
+        Remove From Game
       </button>
     </div>
   )
