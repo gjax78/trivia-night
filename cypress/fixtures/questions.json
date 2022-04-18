@@ -1,0 +1,28 @@
+[{
+"category": "Arts & Literature",
+"id": "622a1c397cc59eab6f950f9a",
+"correctAnswer": "William Shakespeare",
+"incorrectAnswers": [
+"Arthur C. Clarke",
+"Isaac Newton",
+"Enid Blyton"
+],
+"question": "Which author wrote 'Macbeth'?",
+"tags": [],
+"type": "Multiple Choice",
+"difficulty": "easy"
+},
+{
+"category": "Arts & Literature",
+"id": "622a1c397cc59eab6f950dfa",
+"correctAnswer": "Isaac Newton",
+"incorrectAnswers": [
+"Daniel Defoe",
+"Percy Bysshe Shelley",
+"Walter Scott"
+],
+"question": "Which author wrote 'Opticks, or a Treatise of the Reflections, Refractions, Inflections and Colours of Light'?",
+"tags": [],
+"type": "Multiple Choice",
+"difficulty": "hard"
+}]
