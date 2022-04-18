@@ -8,40 +8,25 @@ import Categories from '../Categories/Categories';
 import { Route, Switch } from 'react-router-dom';
 import Game from '../Game/Game';
 import Header from '../Header/Header'
-
-
-
-
-export interface QuestionsType {
-  questionsProp: QuestionDataType[]
-}
-
-export interface QuestionDataType {
-  category: string,
-  id: string,
-  question: string,
-  correctAnswer: string,
-  incorrectAnswers: Array<string>,
-  difficulty?: string,
-  type: string,
-  tags: Array<string>,
-  key?: string
-}
+import { QuestionDataType as QuestionDataType } from '../../utilities/utilities';
+import { LikedQuestion as LikedQuestion } from '../../utilities/utilities';
+import { CategoryFetch as CategoryFetch } from '../../utilities/utilities';
+import { AddQuestion as AddQuestion } from '../../utilities/utilities';
 
 const App = () => {
   const [questionsState, setQuestionState] = useState<QuestionDataType[]>([]);
-  const [game, setGame] = useState([])
+  const [game, setGame] = useState<QuestionDataType[] | LikedQuestion[]>([])
 
-  const fetchCategory = (category: string) => {
+  const fetchCategory:  CategoryFetch = (category) => {
     fetchData.getData(`https://the-trivia-api.com/questions?categories=${category}&limit=20`)
     .then(data => setQuestionState(data));
   }
 
-  const addToGame = (likedQuestion) => {
+  const addToGame: AddQuestion = (likedQuestion) => {
     setGame([...game, likedQuestion])
   }
 
-  const removeFromGame = (id) => {
+  const removeFromGame = (id : string): void => {
     const filteredGame = game.filter(question => question.id != id);
 
     setGame(filteredGame);
@@ -57,7 +42,8 @@ const App = () => {
         <Header />
         <Questions 
           questionsProp={questionsState}
-          addToGame={addToGame} 
+          addToGame={addToGame}
+          removeFromGame={removeFromGame} 
         />
       </Route>
       <Route exact path='/game'>

@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { QuestionsType as CategoriesDataType } from '../App/App';
+import { CategoriesProps as CategoriesProp } from '../../utilities/utilities';
 import fetchData from '../../apiCalls';
 import { Route, Link, Switch } from 'react-router-dom';
 import Questions from '../Questions/Questions';
 import './Categories.css';
 
-interface Card {
-  onClick: React.MouseEvent<HTMLButtonElement>;
-}
-
-const Categories = ( { fetchCat } ) => {
+const Categories = ( { fetchCat }: CategoriesProp ) : JSX.Element => {
 
   return (
     <div className='button-container'>
@@ -65,7 +61,6 @@ const Categories = ( { fetchCat } ) => {
       value={'sport_and_leisure'}
       onClick={() => fetchCat('sport_and_leisure')}>Sports & Leisure</button>
     </Link>
-    
     </div>
   )
 }

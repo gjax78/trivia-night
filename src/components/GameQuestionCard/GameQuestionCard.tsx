@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { QuestionDataType as QuestionDataType } from '../App/App'
+import { GameCardProps as GameCardProps } from '../../utilities/utilities';
 import '../QuestionCard/QuestionCard.css'
 
-const GameQuestionCard = ({category, question, correctAnswer, incorrectAnswers, difficulty, removeFromGame, id }: QuestionDataType) : JSX.Element => {
+const GameQuestionCard = ({category, question, correctAnswer, incorrectAnswers, difficulty, removeFromGame, id }: GameCardProps) : JSX.Element => {
 
   return (
     <div className='game-card'>
