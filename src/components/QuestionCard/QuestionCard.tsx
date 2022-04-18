@@ -31,7 +31,7 @@ const QuestionCard = ({addToGame, removeFromGame, question, correctAnswer, incor
       <h2>{category}</h2>
       <h4>{question}</h4>
       <p>{correctAnswer}</p>
-      <p>{incorrectAnswers}</p>
+      <p>{incorrectAnswers.join(', ')}</p>
       <p>{difficulty}</p>
 
       <button className='like-button'
