@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# Trivia Night
+  Want to host a trivia night but don't know where to start? Trivia Night is here!
+  With Trivia Night a user will land on the page and see a series of trivia categories. From there the user will see a list of trivia questions for that category. They can then add and remove questions to their game page to create their own customized list of trivia questions!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![gif]()
 
-## Available Scripts
 
-In the project directory, you can run:
+## How to run
+1. Clone the repo down to your machine
+2. Open the root directory and run ```npm i``` to install dependencies
+3. Run ```npm start``` in the terminal to open the webpage
+4. Open a second terminal tab and run ```npm run cypress``` (while localhost:3000 is still running) to access the cypress testing for this app
 
-### `npm start`
+## Features
+- User can save questions to their game
+- User can remove questions from their game
+- Fully tested with Cypress
+- Deployed with Surge
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![gif]()
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
+- React.js
+- Typescript
+- React Router
+- CSS
+- HTML
+- Cypress
+- RESTful APIs
+- Figma
 
-### `npm test`
+## Goals
+- Clean and consistent React Architecture
+- Implementation of Typescript
+- Create a multi-page UX using Router
+- User flows tested with cypress
+- Project spec can be found [here](https://frontend.turing.edu/projects/module-3/stretch.html)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Future Additions
+- Incorporate Sass
+- A user can add their own questions
+- Sort questions by difficulty
+- Play a trivia game in app
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Design Inspiration
+- Wireframe can be found [here](https://www.figma.com/file/JWEl8TMAQTnXDCkFI06P71/Stretch-Tech---Trivia-Night?node-id=0%3A1)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Contributors
+<table>
+    <tr>
+        <td> Geena Jackson: <a href="https://github.com/gjax78">GitHub</td>
+        <td> Sam Mistele: <a href="https://github.com/SamusMist">GitHub</td>
+        <td> Casey Halstead: <a href="https://github.com/chalstead16">GitHub</td>
+        <td> Brenda Sotelo: <a href="https://github.com/BrendaSotel0">Github</td>
+    </tr>
+ <td><img src="https://user-images.githubusercontent.com/88151743/157297276-e9c007e9-7f50-4c62-902a-d454e50b5b3e.jpeg" alt="Geena Jackson GitHub"
+ width="150" height="auto" /></td>
+ <td><img src="https://avatars.githubusercontent.com/u/89484102?v=4g" alt="Sam Mistele GitHub"
+ width="150" height="auto" /></td>
+ <td><img src="https://avatars.githubusercontent.com/u/91504411?v=4" alt="Casey Halstead GitHub"
+ width="150" height="auto" /></td>
+ <td><img src="https://avatars.githubusercontent.com/u/89258056?v=4" alt="Brenda Sotelo GitHub"
+ width="150" height="auto" /></td>
+</table>
