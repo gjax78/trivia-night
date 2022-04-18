@@ -4,6 +4,8 @@
 
 ![gif](https://user-images.githubusercontent.com/91504411/163891825-8dc313f4-dab1-497a-a463-5e457d22c617.gif)
 
+## Deployed Link
+[Trivia Night](https://trivia-nights.herokuapp.com/)
 
 ## How to run
 1. Clone the repo down to your machine
@@ -15,8 +17,7 @@
 - User can save questions to their game
 - User can remove questions from their game
 - Fully tested with Cypress
-- Deployed with Surge
-
+- Deployed with Heroku
 
 ## Technologies Used
 - React.js
@@ -40,7 +41,6 @@
 - A user can add their own questions
 - Sort questions by difficulty
 - Play a trivia game in app
-
 
 ### Design Inspiration
 - Wireframe can be found [here](https://www.figma.com/file/JWEl8TMAQTnXDCkFI06P71/Stretch-Tech---Trivia-Night?node-id=0%3A1)
