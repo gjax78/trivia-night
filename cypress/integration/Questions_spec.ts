@@ -51,7 +51,7 @@ describe('Questions Page', () => {
         cy.get('*[class^="arts-and-literature"]')
         .click({ force: true })
         cy.get('*[class^="questions-container"]')
-        .contains("Arthur C. ClarkeIsaac NewtonEnid Blyton")
+        .contains("Arthur C. Clarke, Isaac Newton, Enid Blyton")
     })
 
     it('should show the difficulty', () => {
