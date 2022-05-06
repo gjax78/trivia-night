@@ -6,6 +6,8 @@
   padding: 0 1% 0 1%;
   box-shadow: 6px 8px 10px #BABD8D;
   text-align: center;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .like-button {
