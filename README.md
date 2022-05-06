@@ -5,7 +5,7 @@
 ![gif](https://user-images.githubusercontent.com/88151743/167160738-15309265-c816-4fc5-a9ab-dcb451e9cc73.gif)
 
 ## Deployed Link
-[Trivia Night](https://trivia-nights.herokuapp.com/)
+[Trivia Night](https://trivia-night-gjax78.vercel.app/)
 
 ## How to run
 1. Clone the repo to your machine
