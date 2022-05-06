@@ -2,13 +2,13 @@
   Want to host a trivia night but don't know where to start? Trivia Night is here!
   With Trivia Night a user will land on the page and see a series of trivia categories. From there the user will see a list of trivia questions for that category. They can then add and remove questions to their game page to create their own customized list of trivia questions!
 
-![gif](https://user-images.githubusercontent.com/91504411/163891825-8dc313f4-dab1-497a-a463-5e457d22c617.gif)
+![gif](https://user-images.githubusercontent.com/88151743/167160738-15309265-c816-4fc5-a9ab-dcb451e9cc73.gif)
 
 ## Deployed Link
 [Trivia Night](https://trivia-nights.herokuapp.com/)
 
 ## How to run
-1. Clone the repo down to your machine
+1. Clone the repo to your machine
 2. Open the root directory and run ```npm i``` to install dependencies
 3. Run ```npm start``` in the terminal to open the webpage
 4. Open a second terminal tab and run ```npm run cypress``` (while localhost:3000 is still running) to access the cypress testing for this app
