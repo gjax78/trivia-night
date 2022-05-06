@@ -29,13 +29,13 @@ const QuestionCard = ({addToGame, removeFromGame, question, correctAnswer, incor
   return (
     <div className='card'>
       <h2>{category}</h2>
-      <h4>{question}</h4>
-      <p>CORRECT ANSWER: {correctAnswer}</p>
-      <p>INCORRECT ANSWERS: {incorrectAnswers.join(', ')}</p>
-      <p>DIFFICULTY: {difficulty}</p>
+      <h4><u>QUESTION:</u> <br></br>{question}</h4>
+      <p><u>CORRECT ANSWER: </u><br></br>{correctAnswer}</p>
+      <p><u>INCORRECT ANSWERS: </u><br></br> {incorrectAnswers.join(', ')}</p>
+      <p><u>DIFFICULTY: </u><br></br>{difficulty}</p>
       <button className='like-button'
         onClick={() => addQuestion()}>
-          {isFav ? 'added' : 'add to game'}
+          {isFav ? 'Added!' : 'Add To Game'}
       </button>
     </div>
   )

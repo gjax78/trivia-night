@@ -9,7 +9,6 @@ const Categories = ( { fetchCat }: CategoriesProp ) : JSX.Element => {
 
   return (
     <div className='button-container'>
-      <div className='top-row'>
         <Link to='/questions'>
           <button className='arts-and-literature'
           value={'arts_and_literature'}
@@ -35,8 +34,6 @@ const Categories = ( { fetchCat }: CategoriesProp ) : JSX.Element => {
           value={'geography'}
           onClick={() => fetchCat('geography')}>Geography</button>
         </Link>
-      </div>
-      <div className='lower-row'>
         <Link to='/questions'>
           <button className='history'
           value={'history'}
@@ -63,7 +60,6 @@ const Categories = ( { fetchCat }: CategoriesProp ) : JSX.Element => {
           onClick={() => fetchCat('sport_and_leisure')}>Sports & Leisure</button>
         </Link>
       </div>
-    </div>
   )
 }
 
