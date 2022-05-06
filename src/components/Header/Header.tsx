@@ -8,13 +8,13 @@ const Header = (): JSX.Element => {
   return (
     <div className='header'>
       <Link to='/'>
-        <button className='home'>Home</button>
+        <button className='home'>HOME</button>
       </Link>
       <Link to='/game'>
-        <button className='view-game'>View Game</button>
+        <button className='view-game'>VIEW GAME</button>
       </Link>
       <div className='title'>
-        <h1>Trivia Night</h1>
+        <h1>TRIVIA NIGHT</h1>
       </div>
     </div>
   )
