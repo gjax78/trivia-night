@@ -1,9 +1,12 @@
 body {
   height: 100%;
   background-color: #003046;
+  color: #FFFFFF;
 }
 
 button {
+  cursor: pointer;
+  color: #FFFFFF;
   background-color: #CC9226;
   height: 100px;
   width: 120px;
