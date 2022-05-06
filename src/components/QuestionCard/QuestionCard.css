@@ -1,6 +1,6 @@
 .card {
-  height: 10%;
-  width: 25%;
+  height: 100%;
+  width: 400px;
   background-color: #025367;
   border-radius: 4%;
   padding: 0 1% 0 1%;
@@ -10,7 +10,8 @@
 
 .like-button {
   height: 35px;
-  width: 50px;
+  width: 75px;
   box-shadow: none;
   margin-bottom: 2%;
+  font-size: 12px;
 }
