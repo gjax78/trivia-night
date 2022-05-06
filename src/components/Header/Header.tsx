@@ -6,7 +6,7 @@ import { Route, Link } from 'react-router-dom';
 const Header = (): JSX.Element => {
 
   return (
-    <div>
+    <div className='header'>
       <Link to='/'>
         <button className='home'>Home</button>
       </Link>
@@ -14,7 +14,10 @@ const Header = (): JSX.Element => {
         <button className='view-game'>View Game</button>
       </Link>
       <div className='title'>
-        <h1>THE HOST WITH THE MOST</h1>
+        <h1>Welcome to Trivia Night!</h1>
+        <h2>Feel free to browse through questions based on categories and save them to your game for easy access when hosting a trivia night with friends.</h2>
+      </div>
+      <div className='description'>
       </div>
     </div>
   )
