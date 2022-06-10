@@ -1,6 +1,27 @@
 .questions-container {
-  display: flex;
-  margin: 5% 0 5% 0;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  margin-top: 20%;
+}
+
+@media screen and (max-width: 1220px) {
+  .questions-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .questions-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .questions-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .question-card {
+    margin-top: 20%;
+  }
 }
