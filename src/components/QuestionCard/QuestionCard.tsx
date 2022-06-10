@@ -35,7 +35,7 @@ const QuestionCard = ({addToGame, removeFromGame, question, correctAnswer, incor
       <p><u>DIFFICULTY: </u><br></br>{difficulty}</p>
       <button className='like-button'
         onClick={() => addQuestion()}>
-          {isFav ? 'Added!' : 'Add To Game'}
+          {isFav ? 'Added!' : 'ADD TO GAME'}
       </button>
     </div>
   )
