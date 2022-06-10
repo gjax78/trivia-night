@@ -12,18 +12,23 @@ body {
 }
 
 .game-card {
-  height: 10%;
-  width: 300px;
-  background-color: #025367;
+  box-sizing: border-box;
+  height: 525px;
+  width: 400px;
+  background-color: #8F9E96;
   border-radius: 4%;
   padding: 0 1% 0 1%;
-  box-shadow: 6px 8px 10px #BABD8D;
+  box-shadow: 6px 8px 10px #B2A691;
   text-align: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin: 0 10% 0 10%;
 }
 
 .delete-button {
-  height: 50px;
-  width: 100px;
+  height: 35px;
+  width: 75px;
   box-shadow: none;
-  margin-bottom: 2%;
+  font-size: 12px;
+  background-color: #FC9987;
 }
