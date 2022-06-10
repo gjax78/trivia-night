@@ -14,7 +14,6 @@ h1 {
 }
 
 .home {
-  /* margin-left: 10vw; */
   border: none;
   border-radius: 100px;
   align-items: center;
@@ -25,7 +24,6 @@ h1 {
 }
 
 .view-game {
-  /* margin-right: 10vw; */
   font-size: .8em;
   border: none;
   border-radius: 100px;
@@ -33,4 +31,27 @@ h1 {
   height: 50px;
   width: 50px;
   background: #FC9987;
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 20px;
+    margin: auto;
+  }
+  .home {
+    height: 35px;
+    width: 35px;
+    font-size: 8px;
+    position: absolute;
+    left: 30%;
+    top: 3.5%;
+  }
+  .view-game {
+    height: 35px;
+    width: 35px;
+    font-size: 8px;
+    position: absolute;
+    left: 40%;
+    top: 3.5%;
+  }
 }
