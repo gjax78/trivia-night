@@ -3,6 +3,7 @@ import "./Game.css";
 import Questions from "../Questions/Questions";
 import GameQuestionCard from "../GameQuestionCard/GameQuestionCard";
 import { GameProps as GameProps } from '../../utilities/utilities';
+import GameEmptyState from "../GameEmptyState/GameEmptyState";
 
 const Game = ({ game, removeFromGame }: GameProps): JSX.Element => {
 
@@ -17,9 +18,12 @@ const Game = ({ game, removeFromGame }: GameProps): JSX.Element => {
       </div>
     )
   })
+
   return (
     <div className='game-container'>
-     {gameQuestions}
+      {gameQuestions.length === 0 ?
+      <GameEmptyState />
+     : gameQuestions}
     </div>
   )
 }

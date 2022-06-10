@@ -1,0 +1,16 @@
+.error-container {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 50%;
+  width: 40%;
+  top: 25%;
+  left: 30%;
+  position: absolute;
+  background: #8F9E96;
+  border-radius: 45px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items: center;
+  font-size: 25px;
+}
