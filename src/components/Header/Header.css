@@ -21,10 +21,12 @@ h1 {
   height: 50px;
   width: 50px;
   background: #8F9E96;
+  font-size: .8em;
 }
 
 .view-game {
   /* margin-right: 10vw; */
+  font-size: .8em;
   border: none;
   border-radius: 100px;
   align-items: center;
