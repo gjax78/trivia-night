@@ -3,7 +3,7 @@ body {
   background-image: url(assets/background.jpg);
   background-size: 100%;
   color: #FFFFFF;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 button {
@@ -17,6 +17,8 @@ button {
   border-radius: 100px;
   box-shadow: 3px 4px 5px #B2A691;
   margin: 10%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 button:hover {
