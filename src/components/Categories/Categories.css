@@ -48,5 +48,7 @@ button:hover {
   .button-container {
     text-align: center;
     grid-template-columns: repeat(2, 1fr);
+    margin-right: 0;
+    margin-left: 0;
   }
 }
