@@ -20,7 +20,7 @@ const GameQuestionCard = ({category, question, correctAnswer, incorrectAnswers, 
         className='delete-button'
         onClick={() => removeFromGame(id)}
       >
-        Remove From Game
+        DELETE
       </button>
     </div>
   )
