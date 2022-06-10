@@ -80,15 +80,15 @@ h1 {
     width: 40px;
     font-size: 8px;
     position: absolute;
-    left: 38%;
+    left: 40%;
     top: 10%;
   }
   .view-game {
-    height: 44px;
-    width: 44px;
+    height: 40px;
+    width: 40px;
     font-size: 8px;
     position: absolute;
-    left: 50%;
-    top: 9.7%;
+    left: 53%;
+    top: 10%;
   }
 }
