@@ -21,6 +21,10 @@ h1 {
   width: 50px;
   background: #FC9987;
   font-size: .8em;
+  position: absolute;
+  left: 82%;
+  top: 2%;
+  margin: 0;
 }
 
 .view-game {
@@ -31,27 +35,55 @@ h1 {
   height: 50px;
   width: 50px;
   background: #FC9987;
+  position: absolute;
+  left: 90%;
+  top: 2%;
+  margin: 0;
 }
 
 @media screen and (max-width: 500px) {
   .title {
-    font-size: 20px;
+    font-size: 25px;
     margin: auto;
   }
   .home {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     font-size: 8px;
     position: absolute;
-    left: 30%;
-    top: 3.5%;
+    left: 31%;
+    top: 5%;
   }
   .view-game {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
+    font-size: 8px;
+    position: absolute;
+    left: 41%;
+    top: 5%;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 25px;
+    margin: auto;
+  }
+  .home {
+    height: 40px;
+    width: 40px;
     font-size: 8px;
     position: absolute;
     left: 40%;
-    top: 3.5%;
+    top: 10%;
+  }
+  .view-game {
+    height: 40px;
+    width: 40px;
+    font-size: 8px;
+    position: absolute;
+    left: 53%;
+    top: 10%;
   }
 }
