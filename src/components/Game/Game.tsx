@@ -21,7 +21,6 @@ const Game = ({ game, removeFromGame }: GameProps): JSX.Element => {
 
   return (
     <div className='game-container'>
-      {console.log(gameQuestions)}
       {gameQuestions.length === 0 ?
       <GameEmptyState />
      : gameQuestions}
