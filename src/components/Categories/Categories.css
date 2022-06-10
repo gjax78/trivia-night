@@ -27,20 +27,27 @@ button:hover {
   transform: scale(1.1);
 }
 
+.link {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  margin-top: 15%;
+}
+
 .button-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1em;
-  margin: 10% 5% 5%;
+  margin: 5% 5% 5% 5%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   .button-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 707px) {
   .button-container {
     grid-template-columns: repeat(2, 1fr);
   }
