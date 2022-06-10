@@ -6,6 +6,7 @@
 
 h1 {
   margin: 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 .title {
@@ -25,6 +26,8 @@ h1 {
   left: 82%;
   top: 2%;
   margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 .view-game {
@@ -39,6 +42,8 @@ h1 {
   left: 90%;
   top: 2%;
   margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 500px) {
