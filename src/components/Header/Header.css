@@ -1,46 +1,94 @@
+.header {
+  background: #ABBAB1;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
 .title {
   text-align: center;
-  padding-left: 20%;
-  padding-right: 20%;
-  display: flex;
-  flex-direction: column;
-  font-size: 25px;
-  -webkit-animation: rotate-scale-down-ver 0.65s linear both;
-  animation: rotate-scale-down-ver 0.65s linear both;
+  font-size: 2em;
 }
 
-@-webkit-keyframes rotate-scale-down-ver {
-  0% {
-    -webkit-transform: scale(1) rotateY(0);
-            transform: scale(1) rotateY(0);
-  }
-  50% {
-    -webkit-transform: scale(0.5) rotateY(180deg);
-            transform: scale(0.5) rotateY(180deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotateY(360deg);
-            transform: scale(1) rotateY(360deg);
-  }
-}
-@keyframes rotate-scale-down-ver {
-  0% {
-    -webkit-transform: scale(1) rotateY(0);
-            transform: scale(1) rotateY(0);
-  }
-  50% {
-    -webkit-transform: scale(0.5) rotateY(180deg);
-            transform: scale(0.5) rotateY(180deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotateY(360deg);
-            transform: scale(1) rotateY(360deg);
-  }
-}
-
-.home, .view-game {
-  width: 85px;
+.home {
+  border: none;
+  border-radius: 100px;
+  align-items: center;
   height: 50px;
-  margin: 1%;
-  font-size: 12px;
+  width: 50px;
+  background: #FC9987;
+  font-size: .8em;
+  position: absolute;
+  left: 82%;
+  top: 1.5%;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+.view-game {
+  font-size: .8em;
+  border: none;
+  border-radius: 100px;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background: #FC9987;
+  position: absolute;
+  left: 90%;
+  top: 1.5%;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 25px;
+    margin: auto;
+  }
+  .home {
+    height: 40px;
+    width: 40px;
+    font-size: 8px;
+    position: absolute;
+    left: 31%;
+    top: 5%;
+  }
+  .view-game {
+    height: 40px;
+    width: 40px;
+    font-size: 8px;
+    position: absolute;
+    left: 41%;
+    top: 5%;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 25px;
+    margin: auto;
+  }
+  .home {
+    height: 40px;
+    width: 40px;
+    font-size: 8px;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+  }
+  .view-game {
+    height: 40px;
+    width: 40px;
+    font-size: 8px;
+    position: absolute;
+    left: 53%;
+    top: 10%;
+  }
 }

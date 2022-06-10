@@ -1,43 +1,63 @@
 body {
   height: 100%;
-  background-color: #003046;
+  background-image: url(assets/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
   color: #FFFFFF;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 button {
+  font-size: 1.5em;
   cursor: pointer;
   color: #FFFFFF;
-  background-color: #CC9226;
-  height: 100px;
-  width: 120px;
+  background-color: #8F9E96;
+  height: 150px;
+  width: 150px;
   border: none;
-  border-radius: 5%;
-  box-shadow: 3px 4px 5px #025367;
+  border-radius: 100px;
+  box-shadow: 3px 4px 5px #B2A691;
   margin: 10%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 button:hover {
   transform: scale(1.1);
 }
 
-.button-container {
-  /* height: 100%; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* margin-top: 5%; */
-  margin: 5%;
- padding-left: 10%;
- padding-right: 10%;
+.link {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  margin-top: 15%;
 }
 
-/* .top-row,
-.lower-row {
-  height: 25%;
-  width: 50%;
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 5%;
-} */
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+  margin: 5% 5% 5% 5%;
+}
+
+@media screen and (max-width: 1170px) {
+  .button-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .button-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .button-container {
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
