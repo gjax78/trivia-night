@@ -2,7 +2,7 @@
   Want to host a trivia night but don't know where to start? Trivia Night is here!
   With Trivia Night a user will land on the page and see a series of trivia categories. From there the user will see a list of trivia questions for that category. They can then add and remove questions to their game page to create their own customized list of trivia questions!
 
-![gif](https://user-images.githubusercontent.com/88151743/167160738-15309265-c816-4fc5-a9ab-dcb451e9cc73.gif)
+![gif](https://user-images.githubusercontent.com/88151743/173131947-2698a5d0-f3de-4099-b37c-58d50460837e.gif)
 
 ## Deployed Link
 [Trivia Night](https://trivia-night-gjax78.vercel.app/)
