@@ -18,7 +18,7 @@ const App = () => {
   const [game, setGame] = useState<QuestionDataType[] | LikedQuestion[]>([])
 
   const fetchCategory:  CategoryFetch = (category) => {
-    fetchData.getData(`https://the-trivia-api.com/questions?categories=${category}&limit=20`)
+    fetchData.getData(`https://the-trivia-api.com/api/questions?categories=${category}&limit=20`)
     .then(data => setQuestionState(data));
   }
 
